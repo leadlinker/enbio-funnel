@@ -61,8 +61,46 @@
         }
 
         .nav-badge {
-            height: 32px;
-            opacity: 0.85;
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.5);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-badge .swiss-cross {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: #EA0000;
+            border-radius: 2px;
+            position: relative;
+        }
+
+        .nav-badge .swiss-cross::before,
+        .nav-badge .swiss-cross::after {
+            content: '';
+            position: absolute;
+            background: white;
+        }
+
+        .nav-badge .swiss-cross::before {
+            width: 10px;
+            height: 3px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .nav-badge .swiss-cross::after {
+            width: 3px;
+            height: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         /* HERO */
@@ -577,7 +615,7 @@
     <nav class="nav">
         <div class="nav-inner">
             <img src="https://enbiobeauty.com/cdn/shop/files/Enbio_logo_white_6_92_KB.png" alt="Enbio" class="nav-logo">
-            <img src="https://www.enbio.com/wp-content/uploads/Designed-in-Switzerland-1.png" alt="Designed in Switzerland" class="nav-badge">
+            <div class="nav-badge"><span class="swiss-cross"></span> Designed in Switzerland</div>
         </div>
     </nav>
 
